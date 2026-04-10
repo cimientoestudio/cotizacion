@@ -30,7 +30,7 @@
         .tab-active {
             border-bottom: 2px solid #d97706;
             color: #d97706;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .tab-inactive {
@@ -47,6 +47,7 @@
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
+    <!-- Navegación -->
     <nav class="bg-stone-900 text-stone-100 sticky top-0 z-50 shadow-md no-print">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -70,6 +71,7 @@
         </div>
     </nav>
 
+    <!-- Header -->
     <header class="bg-stone-200 py-16 md:py-24 border-b border-stone-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-amber-600 font-bold tracking-widest uppercase mb-3">Propuesta de Servicios de Arquitectura</p>
@@ -88,6 +90,7 @@
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
+        <!-- Detalles -->
         <section id="detalles" class="scroll-mt-20">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center transition-all hover:shadow-md">
@@ -109,6 +112,7 @@
             </div>
         </section>
 
+        <!-- Precio -->
         <section id="precio" class="scroll-mt-20 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-200">
             <div class="mb-10 md:flex justify-between items-end gap-6">
                 <div class="md:w-2/3">
@@ -202,6 +206,7 @@
             </div>
         </section>
 
+        <!-- Metodología -->
         <section id="metodologia" class="scroll-mt-20">
             <h2 class="text-3xl font-bold text-stone-900 mb-8">Metodología de Trabajo</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -228,6 +233,7 @@
             </div>
         </section>
 
+        <!-- Requerimientos -->
         <section id="requisitos" class="scroll-mt-20">
             <div class="bg-white rounded-3xl shadow-sm border border-stone-200 overflow-hidden">
                 <div class="flex flex-wrap border-b border-stone-200 bg-stone-50/50 no-print">
@@ -243,7 +249,8 @@
                 </div>
 
                 <div class="p-8 md:p-12 min-h-[300px]">
-                    <div id="tab-docs" class="tab-content block">
+                    <!-- Contenido Pestaña 1 -->
+                    <div id="tab-docs" class="tab-content">
                         <h3 class="text-xl font-bold mb-6">Documentación Requerida</h3>
                         <p class="text-sm text-stone-500 mb-8 italic">El propietario debe proveer los siguientes documentos para formalizar el ingreso:</p>
                         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -266,16 +273,19 @@
                         </ul>
                     </div>
 
+                    <!-- Contenido Pestaña 2 -->
                     <div id="tab-servicios" class="tab-content hidden">
                         <h3 class="text-xl font-bold mb-6">Alcance del Servicio</h3>
                         <ul class="space-y-4">
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Medición digital en terreno y modelado 3D de visualización básica.</li>
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Proyecto completo de Arquitectura (Plantas, Cortes, Elevaciones).</li>
+                            <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Especificaciones Técnicas (EETT) para construcción.</li>
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Gestión administrativa y seguimiento ante la Dirección de Obras.</li>
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Resolución técnica de observaciones emitidas por el municipio.</li>
                         </ul>
                     </div>
 
+                    <!-- Contenido Pestaña 3 -->
                     <div id="tab-exclusiones" class="tab-content hidden text-sm leading-relaxed text-stone-600">
                         <h3 class="text-xl font-bold mb-6 text-stone-900">Consideraciones Generales</h3>
                         <div class="space-y-6">
@@ -291,6 +301,7 @@
             </div>
         </section>
 
+        <!-- Formalización -->
         <section id="pago" class="bg-stone-900 text-stone-100 p-8 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
             <div class="absolute top-0 right-0 p-16 opacity-[0.05] pointer-events-none">
                 <svg viewBox="0 0 40 40" class="w-[20rem] h-[20rem]" fill="currentColor">
@@ -354,16 +365,8 @@
         const appState = {
             conIva: false,
             data: {
-                neto: { 
-                    total: 604800, 
-                    hitos: [181440, 241920, 181440], 
-                    recepcion: 100000 
-                },
-                iva: { 
-                    total: 719712, 
-                    hitos: [215914, 287885, 215914], 
-                    recepcion: 119000 
-                }
+                neto: { total: 604800, hitos: [181440, 241920, 181440], recepcion: 100000 },
+                iva: { total: 719712, hitos: [215914, 287885, 215914], recepcion: 119000 }
             }
         };
 
@@ -385,12 +388,12 @@
             const lIva = document.getElementById('label-iva');
 
             if (appState.conIva) {
-                knob.classList.replace('translate-x-1', 'translate-x-6');
+                knob.style.transform = 'translateX(1.5rem)';
                 btn.classList.replace('bg-stone-400', 'bg-amber-600');
                 lIva.classList.replace('text-stone-400', 'text-amber-600');
                 lNeto.classList.replace('text-stone-700', 'text-stone-400');
             } else {
-                knob.classList.replace('translate-x-6', 'translate-x-1');
+                knob.style.transform = 'translateX(0.25rem)';
                 btn.classList.replace('bg-amber-600', 'bg-stone-400');
                 lIva.classList.replace('text-amber-600', 'text-stone-400');
                 lNeto.classList.replace('text-stone-400', 'text-stone-700');
@@ -417,54 +420,32 @@
                 responsive: true, 
                 maintainAspectRatio: false, 
                 cutout: '75%', 
-                plugins: { 
-                    legend: { 
-                        position: 'bottom', 
-                        labels: { boxWidth: 12, font: { size: 10 } } 
-                    } 
-                } 
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } } } 
             }
         });
 
-        const ctxTime = document.getElementById('timelineChart').getContext('2d');
-        new Chart(ctxTime, {
-            type: 'bar',
-            data: {
-                labels: ['Regularización'],
-                datasets: [
-                    { label: 'Levantamiento', data: [1], backgroundColor: '#1c1917' },
-                    { label: 'Diseño/Planimetría', data: [30], backgroundColor: '#d97706' },
-                    { label: 'Revisión Municipal', data: [30], backgroundColor: '#a8a29e' },
-                    { label: 'Obs.', data: [10], backgroundColor: '#e7e5e4' }
-                ]
-            },
-            options: { 
-                indexAxis: 'y', 
-                responsive: true, 
-                maintainAspectRatio: false, 
-                scales: { 
-                    x: { stacked: true, display: false }, 
-                    y: { stacked: true, display: false } 
-                },
-                plugins: { 
-                    legend: { 
-                        position: 'bottom', 
-                        labels: { boxWidth: 10, font: { size: 9 } } 
-                    } 
-                }
-            }
-        });
-
+        // Lógica de Pestañas Corregida
         document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.onclick = () => {
+            btn.addEventListener('click', () => {
+                // Gestionar clases de los botones
                 document.querySelectorAll('.tab-btn').forEach(b => { 
                     b.classList.remove('tab-active'); 
                     b.classList.add('tab-inactive'); 
                 });
                 btn.classList.add('tab-active');
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
-                document.getElementById(btn.dataset.target).classList.remove('hidden');
-            };
+                btn.classList.remove('tab-inactive');
+
+                // Gestionar visibilidad del contenido
+                document.querySelectorAll('.tab-content').forEach(c => {
+                    c.classList.add('hidden');
+                });
+                
+                const targetId = btn.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                }
+            });
         });
 
         updateUI();
