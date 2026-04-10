@@ -47,12 +47,10 @@
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
-    <!-- Navegación -->
     <nav class="bg-stone-900 text-stone-100 sticky top-0 z-50 shadow-md no-print">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <!-- Logo Vectorial -->
                     <div class="text-white">
                         <svg viewBox="0 0 40 40" class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <rect x="8" y="8" width="4" height="24" rx="0.5"/>
@@ -72,14 +70,13 @@
         </div>
     </nav>
 
-    <!-- Hero / Header -->
     <header class="bg-stone-200 py-16 md:py-24 border-b border-stone-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-amber-600 font-bold tracking-widest uppercase mb-3">Propuesta de Servicios de Arquitectura</p>
             <h1 class="text-5xl md:text-6xl font-extrabold text-stone-900 mb-6 tracking-tight">Proyecto de Obra Nueva</h1>
             <p class="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
                 Preparado para <span class="font-bold text-stone-800">Josselyn</span>. 
-                Proyecto de Obra Nueva para una superficie proyectada de 112 m².
+                Servicios de regularización y recepción final para una superficie proyectada de 112 m².
             </p>
             <div class="mt-10 flex justify-center gap-4 no-print">
                 <button onclick="window.print()" class="bg-stone-900 text-white px-10 py-3 rounded-lg font-bold hover:bg-stone-800 transition-all flex items-center gap-2">
@@ -91,7 +88,6 @@
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
-        <!-- Sección Detalles Clave -->
         <section id="detalles" class="scroll-mt-20">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center transition-all hover:shadow-md">
@@ -107,13 +103,12 @@
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center transition-all hover:shadow-md">
                     <div class="text-4xl mb-4">🏠</div>
                     <h3 class="text-stone-500 text-xs uppercase tracking-widest font-bold mb-2">Visita Técnica</h3>
-                    <p class="text-5xl font-black text-stone-900">Incluida en el presupuesto</p>
-                    <p class="text-[10px] text-amber-600 font-bold mt-2 uppercase">100% Abonable al Hito 1</p>
+                    <p class="text-5xl font-black text-stone-900">Incluida</p>
+                    <p class="text-[10px] text-amber-600 font-bold mt-2 uppercase">Gestión integrada en el proyecto</p>
                 </div>
             </div>
         </section>
 
-        <!-- Presupuesto y Estructura -->
         <section id="precio" class="scroll-mt-20 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-200">
             <div class="mb-10 md:flex justify-between items-end gap-6">
                 <div class="md:w-2/3">
@@ -146,20 +141,26 @@
                 <div class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="p-6 bg-stone-50 rounded-xl border border-stone-200 border-l-8 border-stone-800">
-                            <h3 class="text-xs text-stone-500 uppercase tracking-widest font-bold mb-1">Arquitectura</h3>
+                            <h3 class="text-xs text-stone-500 uppercase tracking-widest font-bold mb-1">Regularización (DOM)</h3>
                             <p class="text-3xl font-black text-stone-900" id="displayTotal">$604.800</p>
+                            <p class="text-[10px] text-stone-400 mt-1 uppercase">Hasta Permiso de Edificación</p>
+                        </div>
+                        <div class="p-6 bg-amber-50 rounded-xl border border-amber-200 border-l-8 border-amber-600">
+                            <h3 class="text-xs text-amber-700 uppercase tracking-widest font-bold mb-1">Recepción Final</h3>
+                            <p class="text-3xl font-black text-amber-900" id="displayRecepcion">$100.000</p>
+                            <p class="text-[10px] text-amber-600/70 mt-1 uppercase">Trámite posterior independiente</p>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <h4 class="font-bold text-stone-800 border-b border-stone-100 pb-2 text-sm uppercase tracking-widest">Cronograma de Pagos</h4>
+                        <h4 class="font-bold text-stone-800 border-b border-stone-100 pb-2 text-sm uppercase tracking-widest">Cronograma de Pagos (Regularización)</h4>
                         
                         <div class="flex justify-between items-center p-4 bg-stone-50 rounded-xl">
                             <div class="flex items-center gap-3">
                                 <span class="flex items-center justify-center w-8 h-8 rounded-full bg-stone-900 text-white font-bold text-xs">1</span>
                                 <div>
                                     <p class="font-bold text-stone-800 text-sm">Hito Inicial (30%)</p>
-                                    <p class="text-[10px] text-amber-600 font-bold uppercase italic">Incluye visita técnica</p>
+                                    <p class="text-[10px] text-stone-400 font-bold uppercase italic">Inicio de levantamiento y diseño</p>
                                 </div>
                             </div>
                             <span class="font-bold text-xl text-stone-900" id="displayPago1">$181.440</span>
@@ -170,7 +171,7 @@
                                 <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-600 text-white font-bold text-xs">2</span>
                                 <div>
                                     <p class="font-bold text-stone-800 text-sm">Ingreso DOM (40%)</p>
-                                    <p class="text-[10px] text-stone-400 font-bold uppercase italic">Expediente completo</p>
+                                    <p class="text-[10px] text-stone-400 font-bold uppercase italic">Expediente completo ingresado</p>
                                 </div>
                             </div>
                             <span class="font-bold text-xl text-stone-900" id="displayPago2">$241.920</span>
@@ -181,82 +182,52 @@
                                 <span class="flex items-center justify-center w-8 h-8 rounded-full bg-stone-200 text-stone-500 font-bold text-xs">3</span>
                                 <div>
                                     <p class="font-bold text-stone-800 text-sm">Aprobación (30%)</p>
-                                    <p class="text-[10px] text-stone-400 font-bold uppercase italic">Resolución de permiso</p>
+                                    <p class="text-[10px] text-amber-600 font-bold uppercase italic">Obtención Permiso Edificación</p>
                                 </div>
                             </div>
                             <span class="font-bold text-xl text-stone-900" id="displayPago3">$181.440</span>
                         </div>
-                        <div class="flex justify-between items-center p-4 hover:bg-stone-50 rounded-xl transition-colors">
-                            <div class="flex items-center gap-3">
-                                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-stone-200 text-stone-500 font-bold text-xs">3</span>
-                                <div>
-                                    <p class="font-bold text-stone-800 text-sm">Pago único</p>
-                                    <p class="text-[10px] text-stone-400 font-bold uppercase italic">Recepción final</p>
+                        
+                        <div class="mt-4 p-4 border-2 border-dashed border-amber-200 rounded-xl bg-amber-50/30">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-stone-400 text-white font-bold text-xs">RF</span>
+                                    <p class="font-bold text-stone-800 text-sm uppercase">Trámite Recepción Final</p>
                                 </div>
+                                <span class="font-bold text-xl text-stone-900" id="displayPagoRF">$100.000</span>
                             </div>
-                            <span class="font-bold text-xl text-stone-900" id="displayPago3">$100.000</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Metodología -->
         <section id="metodologia" class="scroll-mt-20">
             <h2 class="text-3xl font-bold text-stone-900 mb-8">Metodología de Trabajo</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="space-y-4 p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
                     <div class="w-12 h-12 bg-stone-900 text-white flex items-center justify-center rounded-xl font-bold shadow-lg shadow-stone-200">01</div>
-                    <h4 class="font-bold text-lg">Diagnóstico</h4>
-                    <p class="text-sm text-stone-600 leading-relaxed">Revisión del Certificado de Informaciones Previas (CIP) y análisis de factibilidad normativa según la OGUC.</p>
+                    <h4 class="font-bold text-lg">Levantamiento</h4>
+                    <p class="text-sm text-stone-600 leading-relaxed">Medición técnica in situ de la propiedad de 112 m² y registro fotográfico para la base del diseño arquitectónico.</p>
                 </div>
                 <div class="space-y-4 p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
                     <div class="w-12 h-12 bg-amber-600 text-white flex items-center justify-center rounded-xl font-bold shadow-lg shadow-amber-100">02</div>
-                    <h4 class="font-bold text-lg">Levantamiento</h4>
-                    <p class="text-sm text-stone-600 leading-relaxed">Medición técnica in situ de la propiedad y registro fotográfico para la base del diseño arquitectónico.</p>
-                </div>
-                <div class="space-y-4 p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
-                    <div class="w-12 h-12 bg-stone-900 text-white flex items-center justify-center rounded-xl font-bold shadow-lg shadow-stone-200">03</div>
                     <h4 class="font-bold text-lg">Proyecto Técnico</h4>
                     <p class="text-sm text-stone-600 leading-relaxed">Elaboración de planos de plantas, cortes, fachadas, cuadro de superficies y especificaciones técnicas (EETT).</p>
                 </div>
                 <div class="space-y-4 p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
-                    <div class="w-12 h-12 bg-stone-900 text-white flex items-center justify-center rounded-xl font-bold shadow-lg shadow-stone-200">04</div>
+                    <div class="w-12 h-12 bg-stone-900 text-white flex items-center justify-center rounded-xl font-bold shadow-lg shadow-stone-200">03</div>
                     <h4 class="font-bold text-lg">Gestión DOM</h4>
-                    <p class="text-sm text-stone-600 leading-relaxed">Ingreso oficial a la Dirección de Obras, seguimiento y respuesta a posibles observaciones técnicas.</p>
+                    <p class="text-sm text-stone-600 leading-relaxed">Ingreso oficial a la Dirección de Obras, seguimiento y respuesta a observaciones hasta obtener el Permiso.</p>
+                </div>
+                <div class="space-y-4 p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-900 text-white flex items-center justify-center rounded-xl font-bold shadow-lg shadow-stone-200">04</div>
+                    <h4 class="font-bold text-lg">Recepción Final</h4>
+                    <p class="text-sm text-stone-600 leading-relaxed">Trámite posterior para certificar que lo construido coincide con el permiso otorgado (Pago independiente).</p>
                 </div>
             </div>
         </section>
 
-        <!-- Cronograma -->
-        <section id="cronograma" class="scroll-mt-20">
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-200">
-                <h3 class="text-xl font-bold mb-8 uppercase tracking-widest text-stone-400">Plazos Estimados</h3>
-                <div class="chart-container">
-                    <canvas id="timelineChart"></canvas>
-                </div>
-                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="p-5 bg-stone-50 rounded-2xl">
-                        <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Fase Diseño</p>
-                        <p class="text-xl font-black text-stone-900">30 Días</p>
-                    </div>
-                    <div class="p-5 bg-stone-50 rounded-2xl">
-                        <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Revisión DOM</p>
-                        <p class="text-xl font-black text-stone-900">30 Días Háb.</p>
-                    </div>
-                    <div class="p-5 bg-stone-50 rounded-2xl">
-                        <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Subsanación</p>
-                        <p class="text-xl font-black text-stone-900">~10 Días</p>
-                    </div>
-                    <div class="p-5 bg-amber-50 rounded-2xl border border-amber-100">
-                        <p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">Total Ciclo</p>
-                        <p class="text-xl font-black text-amber-900">~70 Días</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pestañas de Requerimientos -->
         <section id="requisitos" class="scroll-mt-20">
             <div class="bg-white rounded-3xl shadow-sm border border-stone-200 overflow-hidden">
                 <div class="flex flex-wrap border-b border-stone-200 bg-stone-50/50 no-print">
@@ -292,10 +263,6 @@
                                 <span class="text-amber-600 mr-3 mt-0.5">✔</span>
                                 <span class="text-sm font-medium">Certificado de Avalúo Fiscal detallado (SII).</span>
                             </li>
-                            <li class="flex items-start p-4 bg-stone-50 rounded-xl border border-stone-100 transition-colors hover:border-amber-200">
-                                <span class="text-amber-600 mr-3 mt-0.5">✔</span>
-                                <span class="text-sm font-medium">Copia Cédula de Identidad del propietario.</span>
-                            </li>
                         </ul>
                     </div>
 
@@ -304,8 +271,7 @@
                         <ul class="space-y-4">
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Medición digital en terreno y modelado 3D de visualización básica.</li>
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Proyecto completo de Arquitectura (Plantas, Cortes, Elevaciones).</li>
-                            <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Especificaciones Técnicas (EETT) para construcción.</li>
-                            <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Gestión administrativa y seguimiento presencial/digital ante la Dirección de Obras.</li>
+                            <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Gestión administrativa y seguimiento ante la Dirección de Obras.</li>
                             <li class="flex items-center text-sm"><span class="w-2 h-2 bg-amber-500 rounded-full mr-4"></span> Resolución técnica de observaciones emitidas por el municipio.</li>
                         </ul>
                     </div>
@@ -317,10 +283,7 @@
                                 <p class="text-amber-900"><strong>Derechos Municipales:</strong> El pago por permiso de edificación es un impuesto municipal externo y es responsabilidad exclusiva del cliente.</p>
                             </div>
                             <div class="p-5 bg-stone-50 rounded-2xl border-l-8 border-stone-400">
-                                <p><strong>Especialistas:</strong> Los honorarios para certificaciones TC6 (Gas), TE1 (Electricidad) o cálculos estructurales no están incluidos, a excepción del ítem sanitario estimado.</p>
-                            </div>
-                            <div class="p-5 bg-stone-50 rounded-2xl border-l-8 border-stone-400">
-                                <p><strong>Plazos Municipales:</strong> El tiempo de revisión de la DOM es regulado por ley (30 días hábiles), por lo que puede variar según la carga del municipio.</p>
+                                <p><strong>Especialistas:</strong> Los honorarios para certificaciones de Gas, Electricidad o cálculos estructurales no están incluidos.</p>
                             </div>
                         </div>
                     </div>
@@ -328,7 +291,6 @@
             </div>
         </section>
 
-        <!-- Sección de Formalización -->
         <section id="pago" class="bg-stone-900 text-stone-100 p-8 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
             <div class="absolute top-0 right-0 p-16 opacity-[0.05] pointer-events-none">
                 <svg viewBox="0 0 40 40" class="w-[20rem] h-[20rem]" fill="currentColor">
@@ -356,7 +318,7 @@
                         </div>
                         <div class="flex justify-between border-b border-white/5 pb-2">
                             <span class="text-stone-500 uppercase">Banco</span>
-                            <span class="text-white">Mercado Pago / Vista</span>
+                            <span class="text-white font-italic">Mercado Pago / Vista</span>
                         </div>
                         <div class="flex justify-between border-b border-white/5 pb-2">
                             <span class="text-stone-500 uppercase">Cuenta</span>
@@ -381,7 +343,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="text-center pb-20 pt-10 border-t border-stone-200">
             <p class="font-black text-stone-900 tracking-tighter text-2xl uppercase mb-2">CIMIENTO ESTUDIO LTDA</p>
             <p class="text-xs text-stone-400 uppercase tracking-widest mb-1">RUT: 77.941.715-8 | Arq. Darío González Moll</p>
@@ -392,10 +353,17 @@
     <script>
         const appState = {
             conIva: false,
-            visitDiscount: 30000,
             data: {
-                neto: { total: 1110000, hitos: [333000, 444000, 333000], sanitario: 300000 },
-                iva: { total: 1320900, hitos: [396270, 528360, 396270], sanitario: 357000 }
+                neto: { 
+                    total: 604800, 
+                    hitos: [181440, 241920, 181440], 
+                    recepcion: 100000 
+                },
+                iva: { 
+                    total: 719712, 
+                    hitos: [215914, 287885, 215914], 
+                    recepcion: 119000 
+                }
             }
         };
 
@@ -405,10 +373,11 @@
             const d = appState.conIva ? appState.data.iva : appState.data.neto;
             
             document.getElementById('displayTotal').textContent = formatCurrency(d.total);
-            document.getElementById('displaySanitario').textContent = formatCurrency(d.sanitario);
+            document.getElementById('displayRecepcion').textContent = formatCurrency(d.recepcion);
             document.getElementById('displayPago1').textContent = formatCurrency(d.hitos[0]);
             document.getElementById('displayPago2').textContent = formatCurrency(d.hitos[1]);
             document.getElementById('displayPago3').textContent = formatCurrency(d.hitos[2]);
+            document.getElementById('displayPagoRF').textContent = formatCurrency(d.recepcion);
             
             const knob = document.getElementById('toggleKnob');
             const btn = document.getElementById('toggleIvaBtn');
@@ -444,14 +413,24 @@
                     borderWidth: 0
                 }]
             },
-            options: { responsive: true, maintainAspectRatio: false, cutout: '75%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } } } }
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                cutout: '75%', 
+                plugins: { 
+                    legend: { 
+                        position: 'bottom', 
+                        labels: { boxWidth: 12, font: { size: 10 } } 
+                    } 
+                } 
+            }
         });
 
         const ctxTime = document.getElementById('timelineChart').getContext('2d');
         new Chart(ctxTime, {
             type: 'bar',
             data: {
-                labels: ['Proyecto'],
+                labels: ['Regularización'],
                 datasets: [
                     { label: 'Levantamiento', data: [1], backgroundColor: '#1c1917' },
                     { label: 'Diseño/Planimetría', data: [30], backgroundColor: '#d97706' },
@@ -463,14 +442,25 @@
                 indexAxis: 'y', 
                 responsive: true, 
                 maintainAspectRatio: false, 
-                scales: { x: { stacked: true, display: false }, y: { stacked: true, display: false } },
-                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 9 } } } }
+                scales: { 
+                    x: { stacked: true, display: false }, 
+                    y: { stacked: true, display: false } 
+                },
+                plugins: { 
+                    legend: { 
+                        position: 'bottom', 
+                        labels: { boxWidth: 10, font: { size: 9 } } 
+                    } 
+                }
             }
         });
 
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.onclick = () => {
-                document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('tab-active'); b.classList.add('tab-inactive'); });
+                document.querySelectorAll('.tab-btn').forEach(b => { 
+                    b.classList.remove('tab-active'); 
+                    b.classList.add('tab-inactive'); 
+                });
                 btn.classList.add('tab-active');
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
                 document.getElementById(btn.dataset.target).classList.remove('hidden');
